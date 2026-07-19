@@ -1,0 +1,12 @@
+[package]
+name = "base_geometry_lib"
+version = "0.1.0"
+edition = "2024"
+#publish = false
+authors = ["xj"]
+description = "openAlias C interface"
+license = "MIT"
+include = ["**/*.rs","Cargo.toml",]
+
+
+[dependencies]

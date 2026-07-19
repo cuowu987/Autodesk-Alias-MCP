@@ -1,0 +1,77 @@
+#[repr(i64)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum StatusCode {
+    Success = 0,
+    Failure = 1,
+    InsufficientMemory = 2,
+    InvalidArgument = 3,
+    NameChangedToUniqueOne = 4,
+    AlreadyCreated = 5,
+    NoProjectEnvironment = 6,
+    CannotDelete = 7,
+    NoParent = 8,
+    InvalidObject = 9,
+    ObjectInSet = 10,
+    ObjectInAnotherSet = 11,
+    ObjectInExclusiveSet = 12,
+    ObjectAncestorInSet = 13,
+    ObjectDescendentInSet = 14,
+    ObjectNotAMember = 15,
+    InvalidWireFile = 16,
+    ExprNotValidName = 17,
+    ExprNotDagObject = 18,
+    ExprNotValidCV = 19,
+    ExprNotValidParameter = 20,
+    ExprNotValidRelative = 21,
+    ExprBadVariable = 22,
+    ExprAxInsertBadRef = 23,
+    ExprAxInsertSelfRef = 24,
+    ExprAxInsertCircRef = 25,
+    ExprParseError = 26,
+    AlreadyTrimmed = 27,
+    ObjectNotFound = 28,
+    ObjectAlreadyPresent = 29,
+    EndOfGlobalCodes = 30,
+}
+
+impl StatusCode {
+    pub fn to_string(&self) -> String {
+        match self {
+            StatusCode::Success => "Success".to_string(),
+            StatusCode::Failure => "Failure".to_string(),
+            StatusCode::InsufficientMemory => "InsufficientMemory".to_string(),
+            StatusCode::InvalidArgument => "InvalidArgument".to_string(),
+            StatusCode::NameChangedToUniqueOne => "NameChangedToUniqueOne".to_string(),
+            StatusCode::AlreadyCreated => "AlreadyCreated".to_string(),
+            StatusCode::NoProjectEnvironment => "NoProjectEnvironment".to_string(),
+            StatusCode::CannotDelete => "CannotDelete".to_string(),
+            StatusCode::NoParent => "NoParent".to_string(),
+            StatusCode::InvalidObject => "InvalidObject".to_string(),
+            StatusCode::ObjectInSet => "ObjectInSet".to_string(),
+            StatusCode::ObjectInAnotherSet => "ObjectInAnotherSet".to_string(),
+            StatusCode::ObjectInExclusiveSet => "ObjectInExclusiveSet".to_string(),
+            StatusCode::ObjectAncestorInSet => "ObjectAncestorInSet".to_string(),
+            StatusCode::ObjectDescendentInSet => "ObjectDescendentInSet".to_string(),
+            StatusCode::ObjectNotAMember => "ObjectNotAMember".to_string(),
+            StatusCode::InvalidWireFile => "InvalidWireFile".to_string(),
+            StatusCode::ExprNotValidName => "ExprNotValidName".to_string(),
+            StatusCode::ExprNotDagObject => "ExprNotDagObject".to_string(),
+            StatusCode::ExprNotValidCV => "ExprNotValidCV".to_string(),
+            StatusCode::ExprNotValidParameter => "ExprNotValidParameter".to_string(),
+            StatusCode::ExprNotValidRelative => "ExprNotValidRelative".to_string(),
+            StatusCode::ExprBadVariable => "ExprBadVariable".to_string(),
+            StatusCode::ExprAxInsertBadRef => "ExprAxInsertBadRef".to_string(),
+            StatusCode::ExprAxInsertSelfRef => "ExprAxInsertSelfRef".to_string(),
+            StatusCode::ExprAxInsertCircRef => "ExprAxInsertCircRef".to_string(),
+            StatusCode::ExprParseError => "ExprParseError".to_string(),
+            StatusCode::AlreadyTrimmed => "AlreadyTrimmed".to_string(),
+            StatusCode::ObjectNotFound => "ObjectNotFound".to_string(),
+            StatusCode::ObjectAlreadyPresent => "ObjectAlreadyPresent".to_string(),
+            StatusCode::EndOfGlobalCodes => "EndOfGlobalCodes".to_string(),
+            //_ => format!("Unknown status code: {:?}", self),
+        }
+    }
+}
+
+#[allow(non_camel_case_types)]
+pub type statusCode = StatusCode;
