@@ -159,6 +159,8 @@ impl PlaneCreateConstruction {
             };
 
             let plane = AlConstructionPlane::new_create_xy_axis(origin, x_axis, y_axis)?;
+            plane.set_name(&name).ok();
+            name = plane.name();
             AlUniverse::redraw_screen().ok();
 
             (plane, "xy".to_string(), x_axis, y_axis)
