@@ -1,6 +1,12 @@
 # Rust build artifacts
+# Keep the generated plugin artifacts in the repository for easy download/use.
+# Ignore other build outputs under nested crates only.
 /target/
-**/target/
+McpServePlugin_5/target/
+base_geometry_lib/target/
+openalias_rs/target/
+layered_canvas_gdi/target/
+alias_lic/target/
 
 # Cargo lock is usually kept for binaries but can be omitted for libraries
 # Keep it if you want reproducible builds for the CLI app.

@@ -48,10 +48,12 @@ cargo run --manifest-path alias_lic/Cargo.toml -- object_create_point --x 0 --y 
 
 ## 说明与注意事项
 
-- [target/openAlias_C.lib](target/openAlias_C.lib) 是 openalias_rs 连接的 C++ 库文件。
+- [target/McpServePlugin_5.dll](target/McpServePlugin_5.dll) 是最终生成的 Alias 插件结果文件。
+- [target/openAlias_C.dll](target/openAlias_C.dll) 和 [target/openAlias_C.lib](target/openAlias_C.lib) 是 openalias_rs 连接的 C++ 库文件。
 - 生成后的 `McpServePlugin_5` 依赖较少，调用响应较快，且不会影响 Alias 的实时操作体验。
 - 当前功能仍不完备，适合用于参考、学习和二次开发，而不是直接作为完整生产级插件使用。
 - MCP 服务默认通过本地地址 `127.0.0.1:9000/mcp` 提供调用入口。
+- `target/` 目录包含本次构建输出产物，已一并纳入仓库内容，便于直接查看和使用。
 
 ## 相关代码位置
 
