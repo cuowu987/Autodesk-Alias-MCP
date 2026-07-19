@@ -266,7 +266,7 @@ extern "C" fn plugin_init(dir_name: *const c_char) -> i32 {
                     return Err("dir_name is empty".to_string());
                 }
                 DIR.set(dir_rust.to_string(), "DIR is error")?; //保存目录
-                let dir_cpp = dir_rust.replace("\\RustPulgin\\target\\debug", "\\bin");
+                let dir_cpp = dir_rust;//.replace("\\RustPulgin\\target\\debug", "\\bin");
                 let icon_path = &format!("{}/a.jpg", dir_cpp);
                 let aleditor_x = AlEditor_X::Init(
                     "AliasMCPserve",
