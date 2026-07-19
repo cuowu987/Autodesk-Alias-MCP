@@ -1,0 +1,24 @@
+# Rust build artifacts
+/target/
+**/target/
+
+# Cargo lock is usually kept for binaries but can be omitted for libraries
+# Keep it if you want reproducible builds for the CLI app.
+# Cargo.lock
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+*.exe
+*.dll
+*.pdb
+*.obj
+*.lib

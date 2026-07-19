@@ -1,0 +1,24 @@
+[package]
+name = "layered_canvas_gdi"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+name = "layered_canvas_gdi"
+path = "src/lib.rs"
+crate-type = ["rlib"]
+
+[dependencies]
+windows = { version = "0.52", features = [
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_Graphics_Gdi",
+    "Win32_Graphics_OpenGL",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Threading",
+] }
+base_geometry_lib = { path = "../base_geometry_lib" }
+
+[build-dependencies]
+cc = "1.0"
